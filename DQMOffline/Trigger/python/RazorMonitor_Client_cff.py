@@ -11,14 +11,9 @@ RazorEfficiency = DQMEDHarvester("DQMGenericClient",
         "effic_dPhiR        'dPhiR turnON;          dphiR;      efficiency'     dPhiR_numerator        dPhiR_denominator",
         "effic_MRVsRsq      'MR efficiency vs Rsq;  MR [GeV];   Rsq'            MRVsRsq_numerator      MRVsRsq_denominator",
     ),
-    #efficiencyProfile = cms.untracked.vstring(
-    #    "effic_Rsq_vs_LS 'Rsq efficiency vs LS; LS; Rsq efficiency' RsqVsLS_numerator RsqVsLS_denominator"
-    #),
-  
 )
 
 
 susyHLTRazorClient = cms.Sequence(
     RazorEfficiency
-    #+ NoBPTXEfficiency
 )
